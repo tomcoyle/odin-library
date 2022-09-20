@@ -5,8 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
   <header class="library-header">
@@ -25,7 +29,7 @@
           <div class="read-container form-text">
             <h3>Read Book?</h3>
             <label class="switch">
-              <input type="checkbox">
+              <input id="read-book-input" type="checkbox">
               <span class="slider round"></span>
             </label>
           </div>
@@ -42,8 +46,22 @@
           <button class="delete-button">Remove</button>
         </div>
       </div>
+      <div class="book-card-container">
+        <div class="book-card-top">
+          <button class="remove-peng"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="book-card-mid">
+          <button class="read-book"><i class="fa-solid fa-book-open"></i></button>
+          <button class="unread-book"><i class="fa-solid fa-book"></i></button>
+        </div>
+        <div class="book-card-bottom">
+          <span class="card-author">J.R.R. TOLKIEN</span>
+          <span class="card-title">Lord of the Rings: Return of the King</span>
+        </div>
+      </div>
     </div>
   </div>
   <script src="Library.js"></script>
+  <script src="https://kit.fontawesome.com/1681c0fdff.js" crossorigin="anonymous"></script>
 </body>
 </html>

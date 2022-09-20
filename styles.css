@@ -194,3 +194,79 @@ body {
   background-color: #783d3d;
 }
 
+.book-card-container {
+  height: 343px;
+  width: 224px;
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+.book-card-top {
+  height: 70%;
+  background-color: #F60;
+  text-align: right;
+  padding: 10px 10px 0 0;
+}
+.remove-peng {
+  background-color: #F60;
+  border: none;
+}
+.remove-peng:hover {
+  color: #FFF;
+}
+.book-card-mid {
+  height: 5%;
+  background-color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.read-book{
+  text-align: center;
+  border: none;
+  background-color: #FFF;
+  height: 90%;
+}
+.read-book:hover {
+  color: #323232;
+}
+.read-book:active {
+  color: #666666;
+}
+.unread-book {
+  display: none;
+  text-align: center;
+  border: none;
+  background-color: #FFF;
+  height: 90%;
+}
+.unread-book:hover {
+  color: #323232;
+}
+.unread-book:active {
+  color: #666666;
+}
+.book-card-bottom {
+  height: 25%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 0 5px;
+}
+.card-author {
+  color: #F60;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.card-title {
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+}
+
