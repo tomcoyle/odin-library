@@ -14,9 +14,10 @@ body {
 }
 
 .header-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Reem Kufi Ink', sans-serif;
   margin: 0 0 0 2vw;
-  margin-left: 3vw;
+  margin-left: 60px;
+  font-weight: bold;
 }
 
 .button-container {
@@ -34,7 +35,7 @@ body {
   width: 240px;
   background-color: rgb(102, 201, 117);
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Reem Kufi Ink', sans-serif;
   font-size: 140%;
   font-weight: bold;
   color: white;
@@ -178,7 +179,7 @@ body {
 .delete-button {
   height: 35px;
   width: 60%;
-  background-color: #c96666;
+  background-color: rgb(218, 72, 72);
   border-radius: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 140%;
@@ -204,7 +205,19 @@ body {
   height: 70%;
   background-color: #F60;
   text-align: right;
-  padding: 10px 10px 0 0;
+  padding: 0px 10px 0 0;
+  /* Add image */
+  /* background-image: url("https://images-na.ssl-images-amazon.com/images/I/51kfFS5-fnL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg");
+  background-size: cover; */
+}
+.read-strip {
+  display: flex;
+  align-items: stretch;
+  height: 3px;
+  background-color: #66c975;
+  margin-top: 10px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .remove-peng {
   background-color: #F60;
@@ -228,6 +241,7 @@ body {
 }
 .read-book:hover {
   color: #323232;
+  cursor: pointer;
 }
 .read-book:active {
   color: #666666;
@@ -241,6 +255,7 @@ body {
 }
 .unread-book:hover {
   color: #323232;
+  cursor: pointer;
 }
 .unread-book:active {
   color: #666666;

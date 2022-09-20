@@ -67,6 +67,15 @@ const newBook = (book) => {
   const bookCardContainer = document.createElement("div")
   bookCardContainer.className = "book-card-container"
   
+  const readStrip = document.createElement("div")
+  readStrip.className = "read-strip"
+  if (book.read===true) {
+    readStrip.style.backgroundColor = "#66c975";
+  } else if(book.read===false) {
+    readStrip.style.backgroundColor = "#ff4040";
+  }
+  bookCardContainer.appendChild(readStrip)
+  
   const bookCardTop = document.createElement("div")
   bookCardTop.className = "book-card-top"
   const bookCardRemoveBtn = document.createElement("button")
@@ -106,22 +115,28 @@ const newBook = (book) => {
   }
   
   readBookButton.onclick = () => {
+    console.log("r")
+    book.read = false
+    readStrip.style.backgroundColor = "#ff4040"
     readBookButton.style.display = "none"
-    unreadBookButton.style.display = "block";
+    unreadBookButton.style.display = "block"
   }
   unreadBookButton.onclick = () => {
+    console.log("u")
+    book.read = true
+    readStrip.style.backgroundColor = "#66c975"
     unreadBookButton.style.display = "none"
-    readBookButton.style.display = "block";
+    readBookButton.style.display = "block"
   }
   
   const bookCardBottom = document.createElement("div")
   bookCardBottom.className="book-card-bottom"
   const cardAuthor = document.createElement("span")
   cardAuthor.className="card-author"
-  cardAuthor.innerText = book.author
+  cardAuthor.innerText = book.author.toUpperCase()
   const cardTitle = document.createElement("span")
   cardTitle.className="card-title"
-  cardTitle.innerText = book.title
+  cardTitle.innerText = book.title.toUpperCase()
   bookCardBottom.appendChild(cardAuthor)
   bookCardBottom.appendChild(cardTitle)
   bookCardContainer.appendChild(bookCardBottom)
@@ -176,7 +191,7 @@ function bookInLibrary(book) {
   for (let i=0; i<myLibrary.length; i++) {
     console.log(book.title, myLibrary[i].title)
     console.log(myLibrary)
-    if (book.title===myLibrary[i].title && book.author===myLibrary[i].author) {
+    if (book.title.toUpperCase()===myLibrary[i].title.toUpperCase() && book.author.toUpperCase()===myLibrary[i].author.toUpperCase()) {
       return true
     }
   }
